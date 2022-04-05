@@ -9,6 +9,15 @@ export const Formulario = () =>{
     const guardarDatos = (e) => {
         e.preventDefault();
 
+        if (!fruta.trim()) {
+            return alert('Campo fruta vacio')
+        }
+
+        
+        if (!descripcion.trim()) {
+            return alert('Campo descripcion vacio')
+        }
+
         setLista([...lista,
             {nombreFruta: fruta, nombreDescripcion: descripcion}
         ])
